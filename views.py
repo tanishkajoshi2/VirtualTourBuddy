@@ -1,8 +1,6 @@
-from rest_framework import viewsets
-from .models import Flight
-from .serializers import FlightSerializer
+from django.http import JsonResponse
+from django.shortcuts import render  # Import only necessary functions
 
-class FlightViewSet(viewsets.ModelViewSet):
-    queryset = Flight.objects.all()
-    serializer_class = FlightSerializer
 
+def flight_list(request):
+    return JsonResponse({"message": "Flight list endpoint"})

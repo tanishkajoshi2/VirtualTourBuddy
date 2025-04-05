@@ -1,20 +1,8 @@
 from django.contrib import admin
 from django.urls import path, include
-from api.views import FlightViewSet
-from rest_framework import routers
 
-
-
-
-
-
-
-router= routers.DefaultRouter()
-router.register(r'flights',FlightViewSet)
 urlpatterns = [
-    
-
-     path('',include(router.urls)) # Ensure 'flights' has a urls.py file
+    path('admin/', admin.site.urls),
+    path('', include('flights.urls')),  # Ensure 'flights' has a urls.py file
+    path("api/v1/", include('api.urls')),  # Ensure 'api' has a urls.py file
 ]
-
-
