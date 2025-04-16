@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>External Flight Results</title>
+</head>
+<body>
+    <h1>External Flight Results</h1>
+    {% if error %}
+        <p>{{ error }}</p>
+    {% else %}
+        <pre>{{ data|safe }}</pre>
+    {% endif %}
+</body>
+</html>
