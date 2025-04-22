@@ -1,0 +1,52 @@
+<!-- flights/templates/flights/flight_list.html -->
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Available Flights</title>
+    <style>
+        table {
+            border-collapse: collapse;
+            width: 80%;
+            margin: 20px auto;
+        }
+        th, td {
+            padding: 10px;
+            border: 1px solid #444;
+            text-align: left;
+        }
+        th {
+            background-color: #eee;
+        }
+    </style>
+</head>
+<body>
+    <h1 style="text-align: center;">Available Flights</h1>
+
+    {% if flights %}
+        <table>
+            <tr>
+                <th>Flight Name</th>
+                <th>Departure City</th>
+                <th>Arrival City</th>
+                <th>Departure Time</th>
+                <th>Arrival Time</th>
+                <th>Price</th>
+            </tr>
+            {% for flight in flights %}
+                <tr>
+                    <td>{{ flight.name }}</td>
+                    <td>{{ flight.departure_city }}</td>
+                    <td>{{ flight.arrival_city }}</td>
+                    <td>{{ flight.departure_time }}</td>
+                    <td>{{ flight.arrival_time }}</td>
+                    <td>{{ flight.price }}</td>
+                </tr>
+            {% endfor %}
+        </table>
+    {% else %}
+        <p style="text-align: center;">No flights found.</p>
+    {% endif %}
+</body>
+</html>
+

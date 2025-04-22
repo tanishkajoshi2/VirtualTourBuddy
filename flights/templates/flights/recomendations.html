@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Flight Recommendations</title>
+</head>
+<body>
+    <h1>Recommended Flights</h1>
+    {% if recommended_flights %}
+        <ul>
+            {% for flight in recommended_flights %}
+                <li>{{ flight.flight_number }} - {{ flight.departure_city }} to {{ flight.arrival_city }} on {{ flight.departure_time }}</li>
+            {% endfor %}
+        </ul>
+    {% else %}
+        <p>No flights found for this route.</p>
+    {% endif %}
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

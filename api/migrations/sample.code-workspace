@@ -1,0 +1,16 @@
+{
+	"folders": [
+		{
+			"path": "../../../../Pictures/Documents/sample"
+		},
+		{
+			"path": "../../../../Pictures/Documents/python"
+		},
+		{
+			"path": "../.."
+		}
+	],
+	"settings": {
+		"liveServer.settings.multiRootWorkspaceName": "project"
+	}
+}
